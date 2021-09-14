@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>INDEX</title>
+</head>
+<body>
+<p><a href="insert">ADD NEW</a></p>
+<table border="1" width="90%" align="center">
+    <tr align="center"><td>ID</td><td>Course NAME</td><td>Course Duration</td><td>Course Detail</td><td>Course Cost</td><td>MANAGE</td></tr>
+    {% for course in courses %}
+        <tr align="center"><td>{{ course.name}}</td><td>{{course.duration}}</td><td>{{course.details}}</td><td>{{course.cost}}</td><td>{{movie.4}}</td><td><a href="search_update?id={{movie.0}}">Edit</a> &nbsp; | &nbsp;<a href="delete/{{movie.0}}">Delete</a></td></tr>
+    {% endfor %}
+</table>
+</body>
+</html>
