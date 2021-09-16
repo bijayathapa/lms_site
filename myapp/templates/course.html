@@ -14,9 +14,11 @@
                <!-- start course content container --> 
                
                <div class="mu-course-container">
-                {% for course in courses %}
+                
                  <div class="row">
+                  {% for course in courses %}
                    <div class="col-md-6 col-sm-6">
+                    
                    <div class="mu-latest-course-single">
                      <figure class="mu-latest-course-img">
                        <img src="{{course.imageURL}}" alt="img"></a>
@@ -33,11 +35,13 @@
                          <span class="mu-course-price" href="#">Rs {{course.cost}}</span>
                        </div>
                      </div>
-                   </div>   
+                   </div>
+                    
                  </div> 
-                 {% endfor %}               
+                 {% endfor %}          
                 </div>
-                
+                 
+                </div>
                <!-- end course content container -->
                <!-- start course pagination -->
                <div class="mu-pagination">

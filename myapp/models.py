@@ -17,7 +17,7 @@ class Course(models.Model):
     @property
     def imageURL(self):
         try:
-            url = self.image.url
+            url = self.course_image.url
         except:
             url = ''
         return url
