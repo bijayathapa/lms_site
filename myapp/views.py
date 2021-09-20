@@ -5,7 +5,10 @@ from .models import *
 
 
 def index(request):
-    context = {}
+    courses = Course.objects.all()
+    context = {
+        'courses': courses,
+    }
     return render(request, 'index.html', context)
 
 def contact(request):
