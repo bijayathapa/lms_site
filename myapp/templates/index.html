@@ -193,7 +193,7 @@ drift.load('efh6admzwhbr');
         <h4>Welcome To Act Learning</h4>
         <span></span>
         <h2>We Will Help You To Learn</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor amet error eius reiciendis eum sint unde eveniet deserunt est debitis corporis temporibus recusandae accusamus.</p>
+        <p>aLearning is a safe, positive place where life skills are learned and applied to meet the challenges of a changing society.</p>
         <a href="#" class="mu-read-more-btn">Read More</a>
       </div>
     </div>
@@ -209,7 +209,7 @@ drift.load('efh6admzwhbr');
         <h4>Free Education</h4>
         <span></span>
         <h2>Online Education For Everyone</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor amet error eius reiciendis eum sint unde eveniet deserunt est debitis corporis temporibus recusandae accusamus.</p>
+        <p>Students build knowledge with a lifelong effort of being open minded and feeding one’s curiosities to promote progress and success throughout their surroundings.</p>
         <a href="#" class="mu-read-more-btn">Read More</a>
       </div>
     </div>
@@ -225,7 +225,7 @@ drift.load('efh6admzwhbr');
         <h4>Exclusivly For Education</h4>
         <span></span>
         <h2>Education For Everyone</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor amet error eius reiciendis eum sint unde eveniet deserunt est debitis corporis temporibus recusandae accusamus.</p>
+        <p>Students will demonstrate strength through building community, caring for others, being honest, and having pride in themselves.</p>
         <a href="#" class="mu-read-more-btn">Read More</a>
       </div>
     </div>
@@ -242,21 +242,21 @@ drift.load('efh6admzwhbr');
             <div class="mu-service-single">
               <span class="fa fa-book"></span>
               <h3>Learn Online</h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima officiis, deleniti dolorem exercitationem praesentium, est!</p>
+              <p>Enhance distance learning and remote training possibilities for students and teachers. Educators rely on aLearning.!</p>
             </div>
             <!-- Start single service -->
             <!-- Start single service -->
             <div class="mu-service-single">
               <span class="fa fa-users"></span>
               <h3>Expert Teachers</h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima officiis, deleniti dolorem exercitationem praesentium, est!</p>
+              <p>We have expert teachers & an international curriculum proven to make people fluent speakers in 100 classes.!</p>
             </div>
             <!-- Start single service -->
             <!-- Start single service -->
             <div class="mu-service-single">
               <span class="fa fa-table"></span>
-              <h3>Best Classrooms</h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima officiis, deleniti dolorem exercitationem praesentium, est!</p>
+              <h3>Get Started</h3>
+              <p>Book a Free trial class with one of our expert teachers & get a Free assessment along with a no commitment personal learning plan.!</p>
             </div>
             <!-- Start single service -->
           </div>
@@ -280,20 +280,19 @@ drift.load('efh6admzwhbr');
                     <h2>About Us</h2>              
                   </div>
                   <!-- End Title -->
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum pariatur fuga eveniet soluta aspernatur rem, nam voluptatibus voluptate voluptates sapiente, inventore. Voluptatem, maiores esse molestiae.</p>
+                  <p>Take a holistic approach to education to conquer online learning. We assist students not just in academics but also in emotional and social abilities, and we teach them vital skills to help them become the greatest versions of themselves.</p>
                   <ul>
-                    <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</li>
-                    <li>Saepe a minima quod iste libero rerum dicta!</li>
-                    <li>Voluptas obcaecati, iste porro fugit soluta consequuntur. Veritatis?</li>
-                    <li>Ipsam deserunt numquam ad error rem unde, omnis.</li>
-                    <li>Repellat assumenda adipisci pariatur ipsam eos similique, explicabo.</li>
+                    <li>aLearning platform,Technology-oriented.</li>
+                    <li>Learn at-home comfort, no need to travel.!</li>
+                    <li>Holistic learning for various age groups</li>
+                    <li>Global access for learners.</li>
                   </ul>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perspiciatis quaerat harum facilis excepturi et? Mollitia!</p>
+                  <p>We motivate and engage learners through exclusive online courses so they may delve deeper into their favorite topics. We are confident that the youngsters who enroll in the course will learn what they are passionate about and pursue it with wholeheartly!</p>
                 </div>
               </div>
               <div class="col-lg-6 col-md-6">
                 <div class="mu-about-us-right">                            
-                <a id="mu-abtus-video" href="https://www.youtube.com/embed/HN3pm9qYAUs" target="mutube-video">
+                <a id="mu-abtus-video" href="https://www.youtube.com/embed/RyWdxvTKZLE" target="mutube-video">
                   <img src="{% static 'img/about.jpg'%}" alt="img">
                 </a>                
                 </div>
@@ -453,15 +452,15 @@ drift.load('efh6admzwhbr');
                     <a href="#"><img src="{{course.imageURL}}" alt="img"></a>
                     <figcaption class="mu-latest-course-imgcaption">
                       <a href="#">{{course.name}}</a>
-                      <span><i class="fa fa-clock-o"></i>90Days</span>
+                      <span><i class="fa fa-clock-o"></i>{{course.duration}} Days</span>
                     </figcaption>
                   </figure>
                   <div class="mu-latest-course-single-content">
                     <h4><a href="#">Lorem ipsum dolor sit amet.</a></h4>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet quod nisi quisquam modi dolore, dicta obcaecati architecto quidem ullam quia.</p>
+                    <p>{{course.details}}</p>
                     <div class="mu-latest-course-single-contbottom">
                       <a class="mu-course-details" href="#">Details</a>
-                      <span class="mu-course-price" href="#">$165.00</span>
+                      <span class="mu-course-price" href="#">Rs.{{course.cost}}</span>
                     </div>
                   </div>
                 </div>

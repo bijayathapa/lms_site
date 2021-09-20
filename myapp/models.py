@@ -21,3 +21,4 @@ class Course(models.Model):
         except:
             url = ''
         return url
+
