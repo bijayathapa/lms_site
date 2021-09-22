@@ -6,8 +6,10 @@ from .models import *
 
 def index(request):
     courses = Course.objects.all()
+    teachers = Teacher.objects.all()
     context = {
         'courses': courses,
+        'teachers': teachers,
     }
     return render(request, 'index.html', context)
 
