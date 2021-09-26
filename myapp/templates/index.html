@@ -142,7 +142,10 @@ drift.load('efh6admzwhbr');
               <a href="#" class="dropdown-toggle" data-toggle="dropdown">Course <span class="fa fa-angle-down"></span></a>
               <ul class="dropdown-menu" role="menu">
                 <li><a href="{%url 'course'%}">Course Archive</a></li>                
-                <li><a href="{% url 'coursedetail' %}">Course Detail</a></li>                
+                <li><a href="{% url 'coursedetail' %}">Course Detail</a></li>
+                {% if request.user.is_active %}
+                <li><a href="{% url 'uploadcourse' %}">Upload Course</a></li> 
+                {% endif %}              
               </ul>
             </li>           
             <li><a href="{%url 'gallery'%}">Gallery</a></li>
@@ -150,12 +153,20 @@ drift.load('efh6admzwhbr');
               <a href="#" class="dropdown-toggle" data-toggle="dropdown">Blog <span class="fa fa-angle-down"></span></a>
               <ul class="dropdown-menu" role="menu">
                 <li><a href="blog-archive.html">Blog Archive</a></li>                
-                <li><a href="blog-single.html">Blog Single</a></li>                
+                <li><a href="blog-single.html">Blog Single</a></li> 
+                {% if request.user.is_active %} 
+                <li><a href="{% url 'writeblog' %}">Write Blog</a></li> 
+                {% endif %}             
               </ul>
             </li>            
             <li><a href="{%url 'contact'%}">Contact</a></li>
-            <li><a href="404.html">404 Page</a></li>               
+            <li><a href="{%url 'login'%}">Login</a></li>               
             <li><a href="#" id="mu-search-icon"><i class="fa fa-search"></i></a></li>
+            {% if request.user.is_active %}
+            <li><a href="#">Hello {{request.user}}</a></li>
+            <li><a href="{%url 'logout'%}">Logout</a></li> 
+            {% endif %}
+             
           </ul>                     
         </div><!--/.nav-collapse -->        
       </div>     
@@ -305,14 +316,14 @@ drift.load('efh6admzwhbr');
   </section>
   <!-- End about us -->
 
-  <!-- Start about us counter -->
+  <!-- Start about us counter 
   <section id="mu-abtus-counter">
     <div class="container">
       <div class="row">
         <div class="col-md-12">
           <div class="mu-abtus-counter-area">
             <div class="row">
-              <!-- Start counter item -->
+              <!-- Start counter item --
               <div class="col-lg-3 col-md-3 col-sm-3">
                 <div class="mu-abtus-counter-single">
                   <span class="fa fa-book"></span>
@@ -321,7 +332,7 @@ drift.load('efh6admzwhbr');
                 </div>
               </div>
               <!-- End counter item -->
-              <!-- Start counter item -->
+              <!-- Start counter item --
               <div class="col-lg-3 col-md-3 col-sm-3">
                 <div class="mu-abtus-counter-single">
                   <span class="fa fa-users"></span>
@@ -330,7 +341,7 @@ drift.load('efh6admzwhbr');
                 </div>
               </div>
               <!-- End counter item -->
-              <!-- Start counter item -->
+              <!-- Start counter item --
               <div class="col-lg-3 col-md-3 col-sm-3">
                 <div class="mu-abtus-counter-single">
                   <span class="fa fa-flask"></span>
@@ -339,7 +350,7 @@ drift.load('efh6admzwhbr');
                 </div>
               </div>
               <!-- End counter item -->
-              <!-- Start counter item -->
+              <!-- Start counter item --
               <div class="col-lg-3 col-md-3 col-sm-3">
                 <div class="mu-abtus-counter-single no-border">
                   <span class="fa fa-user-secret"></span>
@@ -347,7 +358,7 @@ drift.load('efh6admzwhbr');
                   <p>Teachers</p>
                 </div>
               </div>
-              <!-- End counter item -->
+              <!-- End counter item --
             </div>
           </div>
         </div>
@@ -459,7 +470,7 @@ drift.load('efh6admzwhbr');
                     <h4><a href="#">Lorem ipsum dolor sit amet.</a></h4>
                     <p>{{course.details}}</p>
                     <div class="mu-latest-course-single-contbottom">
-                      <a class="mu-course-details" href="#">Details</a>
+                      <a class="mu-course-details" href="{%url 'coursedetail'%}">Details</a>
                       <span class="mu-course-price" href="#">Rs.{{course.cost}}</span>
                     </div>
                   </div>
