@@ -558,7 +558,7 @@ img {
  ABOUT US COUNTER SECTION
 ====================*/
 #mu-abtus-counter {
-  background-image: url("../img/counter-bg.jpg");
+  background-image: url("../img/eduimage.jpg");
   background-repeat: no-repeat;
   background-size: 100%;
   display: inline;
@@ -579,19 +579,19 @@ img {
   width: 100%;
 }
 #mu-abtus-counter .mu-abtus-counter-area .mu-abtus-counter-single span {
-  color: #fff;
+  /*color: #fff;*/
   display: inline-block;
   font-size: 50px;
 }
 #mu-abtus-counter .mu-abtus-counter-area .mu-abtus-counter-single h4 {
-  color: #fff;
+  /*color: #fff;*/
   font-size: 40px;
   font-weight: bold;
   margin-bottom: 5px;
   margin-top: 20px;
 }
 #mu-abtus-counter .mu-abtus-counter-area .mu-abtus-counter-single p {
-  color: #fff;
+  /*color: #fff;*/
   font-size: 18px;
   text-transform: uppercase;
 }
@@ -904,7 +904,7 @@ img {
 ====================*/
 #mu-testimonial {
   background-attachment: fixed;
-  background-image: url("../img/testimonial-bg.jpg");
+  background-image: url("../img/college.jpg");
   background-position: center center;
   background-size: cover;
   display: inline;
