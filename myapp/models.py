@@ -9,7 +9,7 @@ class Course(models.Model):
     details = models.TextField(null=True)
     cost = models.IntegerField(null=True)
     course_image = models.ImageField(null = True, blank = True )
-    
+    pdf = models.FileField(upload_to='books/pdf', null=True)
     def __str__(self):
         return self.name
     
@@ -39,3 +39,12 @@ class Teacher(models.Model):
         except:
             url = ''
         return url
+
+
+class Book(models.Model):
+    title = models.CharField(max_length=100, null=True)
+    author = models.CharField(max_length=100, null=True)
+    pdf = models.FileField(upload_to='books/pdf')
+
+    def __str__(self):
+        return self.title
